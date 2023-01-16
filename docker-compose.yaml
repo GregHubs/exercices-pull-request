@@ -1,0 +1,12 @@
+version: '3.9'
+services:
+  php_apache:
+    build:
+      context: . #context defines either a path to a directory containing a Dockerfile, or a url to a git repository
+      dockerfile: Dockerfile
+    container_name: php_apache
+    volumes:
+      - ./:/app/
+    ports:
+      - 88:80
+      
